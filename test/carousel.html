@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>layui</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="../layui/css/layui.css" media="all">
+		<!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+	</head>
+	<body>
+
+<button id="btn" >click</button>
+
+		<div class="layui-carousel" id="test3" lay-filter="test4">
+			<div carousel-item="">
+				<div><a href="http://www.baidu.com"> <img style="  width:100%;
+    height:auto;" src="../imgs/c1.jpg">
+						<p style="display: inline-block; text-align: center; width: 100%; position: absolute; z-index: 2; bottom: 40px;">内涵文字勿触</p>
+					</a></div>
+				<div><img style="  width:100%;
+    height:auto;" src="../imgs/c2.jpg"></div>
+				<div><img style="  width:100%;
+    height:auto;" src="../imgs/c3.jpg"></div>
+				<div><img style="  width:100%;
+    height:auto;" src="../imgs/c4.jpg"></div>
+				<div><img style="  width:100%;
+    height:auto;" src="../imgs/c5.jpg"></div>
+			</div>
+		</div>
+
+
+
+
+		<script src="../layui/layui.js" charset="utf-8"></script>
+		<script src="../js/carousel.js"></script>
+		<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+		<script>
+			var width = document.body.clientWidth
+			initCaroulsel("test3",{width: width //设置容器宽度
+						,
+					arrow: 'always' //始终显示箭头，可选hover,none
+						//,anim: 'updown'    //切换动画方式，可选fade,default
+						,
+					full: false //全屏
+						,
+					autoplay: true //自动切换
+						,
+					interval: 1000 //自动切换的时间间隔
+						,
+					index: 3 //初始化时item索引,默认时0
+						,
+					indicator: 'inside' //指示器位置，可选outside,none
+				})
+				document.getElementById("btn").addEventListener("click",function(){
+					changeData({width: 800 //设置容器宽度
+						,
+					arrow: 'always' //始终显示箭头，可选hover,none
+						//,anim: 'updown'    //切换动画方式，可选fade,default
+						,
+					full: false //全屏
+						,
+					autoplay: true //自动切换
+						,
+					interval: 1000 //自动切换的时间间隔
+						,
+					index: 3 //初始化时item索引,默认时0
+						,
+					indicator: 'inside' //指示器位置，可选outside,none
+				})
+				},false)
+// 			layui.use('carousel', function() {
+// 				var width = document.body.clientWidth
+// 				var height = document.body.clientHeight
+// 				var carousel = layui.carousel;
+// 				//建造实例
+// 				var ins=carousel.render({
+// 					elem: '#test3',
+// 					width: width //设置容器宽度
+// 						,
+// 					arrow: 'always' //始终显示箭头，可选hover,none
+// 						//,anim: 'updown'    //切换动画方式，可选fade,default
+// 						,
+// 					full: false //全屏
+// 						,
+// 					autoplay: true //自动切换
+// 						,
+// 					interval: 1000 //自动切换的时间间隔
+// 						,
+// 					index: 3 //初始化时item索引,默认时0
+// 						,
+// 					indicator: 'inside' //指示器位置，可选outside,none
+// 				});
+// 
+// 				$ = layui.jquery;
+// 				$(document).on('click', '#btn', function() {
+// 						ins.reload({
+// 						width: '800' //设置容器宽度
+// 							,
+// 						arrow: 'always' //始终显示箭头，可选hover,none
+// 							//,anim: 'updown'    //切换动画方式，可选fade,default
+// 							,
+// 						full: false //全屏
+// 							,
+// 						autoplay: true //自动切换
+// 							,
+// 						interval: 1000 //自动切换的时间间隔
+// 							,
+// 						index: 3 //初始化时item索引,默认时0
+// 							,
+// 						indicator: 'inside' //指示器位置，可选outside,none
+// 					});
+// 				});
+// 			});
+		</script>
+
+	</body>
+</html>
